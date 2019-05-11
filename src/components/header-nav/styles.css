@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  background-color: #1079a2;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  padding: 1rem;
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+}
+
+.navListItem {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.navListItem a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.navListItem a.selected {
+  color: #232525;
+}

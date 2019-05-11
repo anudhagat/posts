@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route } from 'react-router-dom';
 import configureStore from './store';
-import PostsView from './views/posts-view';
-import PostDetailView from './views/post-detail-view';
-import UserView from './views/user-view';
+import Layout from './views/layout';
 
 const store = configureStore({});
 
@@ -13,9 +11,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <Route exact path="/" component={PostsView} />
-          <Route path="/user" component={UserView} />
-          <Route path="/post" component={PostDetailView} />
+          <Route path="/" component={Layout} />
         </BrowserRouter>
       </Provider>
     );
