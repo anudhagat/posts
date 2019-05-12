@@ -1,7 +1,7 @@
 .postList {
   list-style: none;
   margin: 0 auto;
-  padding: 0;
+  padding: 3.5rem 0;
   max-width: 80%;
   display: flex;
   flex-direction: column;
@@ -9,5 +9,10 @@
 }
 
 .postListItem {
-  padding: 1rem;
+  padding: 1rem 0;
+  border-bottom: solid 1px gray;
+}
+
+.postListItem:first-of-type {
+  border-top: solid 1px gray;
 }

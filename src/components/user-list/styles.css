@@ -1,0 +1,38 @@
+.userListContainer {
+  padding: 3.5rem 0;
+}
+
+.userList {
+  list-style: none;
+  margin: 0 auto;
+  max-width: 80%;
+  width: 80%;
+  table-layout: auto;
+  border-collapse: collapse;
+}
+
+.userList tr {
+  max-width: 100%;
+  text-align: left;
+}
+
+.userListItem {
+  padding: 1rem 0;
+  border-bottom: solid 1px gray;
+}
+
+.userListItem:first-of-type {
+  border-top: solid 1px gray;
+}
+
+.userListItem td {
+  padding: 1rem 0;
+}
+
+.headerField {
+  border-bottom: solid 1px gray;
+}
+
+.headerField th {
+  padding: 1rem 0;
+}

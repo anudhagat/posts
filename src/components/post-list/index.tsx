@@ -5,6 +5,8 @@ import './styles.css';
 
 type Props = {
   posts: Post[];
+  isUsersLoading: boolean;
+  isPostsLoading: boolean;
 };
 
 function PostList({ posts }: Props) {
