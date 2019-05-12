@@ -32,8 +32,7 @@ export class UsersView extends Component<Props> {
 
 const mapStateToProps = (state: AppState) => ({
   users: Object.values(state.users.users) || [],
-  isUsersLoading: state.users.loading,
-  isPostsLoading: state.posts.loading,
+  loading: state.users.loading,
 });
 
 const mapDispatchToProps = {

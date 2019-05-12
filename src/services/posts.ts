@@ -15,7 +15,7 @@ export function fetchUsers() {
 }
 
 export function fetchCommentsByPostId(postId: number) {
-  return fetch(`${BASE_API_URL}/comments/postId=${postId}`)
+  return fetch(`${BASE_API_URL}/comments?postId=${postId}`)
     .then((response: any) => response.json())
     .catch((err: any) => err);
 }
