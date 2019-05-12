@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import HeaderNav from '../../components/header-nav';
 import PostsView from '../posts-view';
 import PostDetailView from '../post-detail-view';
-import UserView from '../user-view';
+import UsersView from '../users-view';
 
 function Layout() {
   return (
@@ -12,7 +12,7 @@ function Layout() {
       <div>
         <Switch>
           <Route exact path="/" component={PostsView} />
-          <Route path="/user" component={UserView} />
+          <Route path="/user" component={UsersView} />
           <Route path="/post" component={PostDetailView} />
         </Switch>
       </div>
