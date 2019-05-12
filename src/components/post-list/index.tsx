@@ -13,7 +13,7 @@ function PostList({ posts }: Props) {
   return (
     <ul className="postList">
       {posts.map((post: Post) => (
-        <PostListItem post={post} />
+        <PostListItem post={post} key={post.id} />
       ))}
     </ul>
   );

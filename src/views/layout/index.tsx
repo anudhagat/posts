@@ -12,8 +12,8 @@ function Layout() {
       <div>
         <Switch>
           <Route exact path="/" component={PostsView} />
-          <Route path="/user" component={UsersView} />
-          <Route path="/post" component={PostDetailView} />
+          <Route path="/users" component={UsersView} />
+          <Route path="/post/:postId" component={PostDetailView} />
         </Switch>
       </div>
     </div>

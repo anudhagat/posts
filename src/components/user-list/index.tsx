@@ -12,13 +12,17 @@ function UserList({ users }: Props) {
   return (
     <div className="userListContainer">
       <table className="userList">
-        <tr className="headerField">
-          <th>Username</th>
-          <th>Name</th>
-        </tr>
-        {users.map((user: User) => (
-          <UserListItem user={user} />
-        ))}
+        <thead>
+          <tr className="headerField">
+            <th>Username</th>
+            <th>Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user: User) => (
+            <UserListItem user={user} key={user.id} />
+          ))}
+        </tbody>
       </table>
     </div>
   );

@@ -13,7 +13,7 @@ function HeaderNav() {
             </NavLink>
           </li>
           <li className="navListItem">
-            <NavLink to="/user" activeClassName="selected">
+            <NavLink to="/users" activeClassName="selected">
               Users
             </NavLink>
           </li>
