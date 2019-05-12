@@ -7,19 +7,17 @@ import {
   FETCH_COMMENTS_FAILURE,
   FETCH_COMMENTS_PENDING,
 } from './types';
-import arrayToObject from '../../utils';
 
-const fetchUsersAction = (
+const fetchCommentsAction = (
   postId: number,
 ): ThunkAction<void, AppState, null, Action<string>> => {
   return dispatch => {
     dispatch({ type: FETCH_COMMENTS_PENDING });
     fetchCommentsByPostId(postId)
       .then(comments => {
-        const CommentsObject = arrayToObject(comments, 'postId');
         return dispatch({
           type: FETCH_COMMENTS_SUCCESS,
-          payload: CommentsObject,
+          payload: { comments, postId },
         });
       })
       .catch(() =>
@@ -31,4 +29,4 @@ const fetchUsersAction = (
   };
 };
 
-export default fetchUsersAction;
+export default fetchCommentsAction;

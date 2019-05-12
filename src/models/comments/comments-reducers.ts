@@ -4,7 +4,7 @@ import {
   FETCH_COMMENTS_FAILURE,
   FETCH_COMMENTS_PENDING,
   CommentActionTypes,
-  Comment,
+  FetchCommentsSuccessPayload,
 } from './types';
 
 const initialState: CommentsState = {
@@ -20,11 +20,15 @@ function commentsReducer(
   const { type, payload } = action;
   switch (type) {
     case FETCH_COMMENTS_SUCCESS:
+      const { postId, comments } = payload as FetchCommentsSuccessPayload;
       return {
         ...state,
         loading: false,
         error: null,
-        comments: payload as { [id: number]: Comment },
+        comments: {
+          ...state.comments,
+          [postId]: comments,
+        },
       };
     case FETCH_COMMENTS_FAILURE:
       return {
