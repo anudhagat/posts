@@ -33,10 +33,11 @@ export class PostsView extends Component<Props> {
     }
   }
   render() {
-    const { posts, isUsersLoading, isPostsLoading } = this.props;
+    const { posts, isUsersLoading, isPostsLoading, users } = this.props;
     return (
       <PostList
         posts={posts}
+        users={users}
         isUsersLoading={isUsersLoading}
         isPostsLoading={isPostsLoading}
       />
