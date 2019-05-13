@@ -11,19 +11,16 @@ type Props = {
 function UserList({ users }: Props) {
   return (
     <div className="userListContainer">
-      <table className="userList">
-        <thead>
-          <tr className="headerField">
-            <th>Username</th>
-            <th>Name</th>
-          </tr>
-        </thead>
-        <tbody>
-          {users.map((user: User) => (
-            <UserListItem user={user} key={user.id} />
-          ))}
-        </tbody>
-      </table>
+      <div className="headerField">
+        <span className="userName">Username</span>
+        <span className="name">Name</span>
+      </div>
+
+      <ul className="userList">
+        {users.map((user: User) => (
+          <UserListItem user={user} key={user.id} />
+        ))}
+      </ul>
     </div>
   );
 }

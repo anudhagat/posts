@@ -1,38 +1,46 @@
 .userListContainer {
   padding: 3.5rem 0;
+  max-width: 80%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .userList {
   list-style: none;
-  margin: 0 auto;
-  max-width: 80%;
-  width: 80%;
-  table-layout: auto;
-  border-collapse: collapse;
-}
-
-.userList tr {
-  max-width: 100%;
-  text-align: left;
-}
-
-.userListItem {
-  padding: 1rem 0;
-  border-bottom: solid 1px gray;
-}
-
-.userListItem:first-of-type {
-  border-top: solid 1px gray;
-}
-
-.userListItem td {
-  padding: 1rem 0;
+  margin: 0;
+  padding: 0;
 }
 
 .headerField {
-  border-bottom: solid 1px gray;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
-.headerField th {
+.userListItem a,
+.headerField {
   padding: 1rem 0;
+  border-bottom: solid 1px gray;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.userListItem a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+.userListItem a:hover,
+.userListItem a:hover,
+.userListItem a:hover {
+  color: inherit;
+  background-color: lightgrey;
+}
+.userName {
+  min-width: 200px;
+  flex-basis: 30%;
+}
+
+.name {
+  flex-basis: auto;
 }

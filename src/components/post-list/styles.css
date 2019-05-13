@@ -16,11 +16,16 @@
   border-top: solid 1px gray;
 }
 
-.postListItem a {
+.postListItem > a {
   display: inline-block;
   width: 100%;
   padding: 1rem 0;
   text-decoration: none;
+}
+
+.postListItem a {
+  color: black;
+  cursor: pointer;
 }
 
 .postListItem a:hover,
