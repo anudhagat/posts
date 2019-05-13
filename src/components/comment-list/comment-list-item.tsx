@@ -12,7 +12,7 @@ function CommentListItem({ comment }: Props) {
       <div className="commentSubject">{comment.name}</div>
       <div className="commentBody">{comment.body}</div>
       <div className="commentEmail">
-        <a href={comment.email}>{comment.email}</a>
+        <a href={`mailto:${comment.email}`}>{comment.email}</a>
       </div>
     </li>
   );
