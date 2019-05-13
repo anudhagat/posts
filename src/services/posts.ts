@@ -25,3 +25,9 @@ export function fetchPostById(postId: number) {
     .then((response: any) => response.json())
     .catch((err: any) => err);
 }
+
+export function fetchUserById(id: number) {
+  return fetch(`${BASE_API_URL}/users/${id}`)
+    .then((response: any) => response.json())
+    .catch((err: any) => err);
+}
