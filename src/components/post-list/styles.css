@@ -9,10 +9,23 @@
 }
 
 .postListItem {
-  padding: 1rem 0;
   border-bottom: solid 1px gray;
 }
 
 .postListItem:first-of-type {
   border-top: solid 1px gray;
+}
+
+.postListItem a {
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 0;
+  text-decoration: none;
+}
+
+.postListItem a:hover,
+.postListItem a:focus,
+.postListItem a:active {
+  color: inherit;
+  background-color: lightgrey;
 }

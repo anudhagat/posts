@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 import { Post } from '../../models/posts/types';
 
@@ -9,7 +10,16 @@ interface Props {
 function PostListItem({ post }: Props) {
   return (
     <li className="postListItem">
-      <span>{post.title}</span>
+      <Link
+        to={{
+          pathname: `/post/${post.id}`,
+          state: {
+            post: post,
+          },
+        }}
+      >
+        <span>{post.title}</span>
+      </Link>
     </li>
   );
 }

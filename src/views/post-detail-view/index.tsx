@@ -4,6 +4,8 @@ import { AppState } from '../../models/reducers';
 import fetchCommentsAction from '../../models/comments/comments-actions';
 import { Comment } from '../../models/comments/types';
 import CommentList from '../../components/comment-list';
+import { Post } from '../../models/posts/types';
+import { User } from '../../models/users/types';
 
 interface OwnProps {
   match: {
@@ -11,11 +13,18 @@ interface OwnProps {
       postId: string;
     };
   };
+  location: {
+    state: {
+      post: Post;
+    };
+  };
 }
 
 interface StateProps {
   comments: Comment[];
   postId: number;
+  post: Post;
+  user: User;
   loading: boolean;
   error: string;
 }
@@ -34,7 +43,9 @@ export class PostDetailView extends Component<Props> {
     }
   }
   render() {
-    const { comments } = this.props;
+    const { comments, post, user } = this.props;
+    console.log('post: ', post);
+    console.log('user: ', user);
     return (
       <div>
         <h3>Post Title: </h3>
@@ -45,11 +56,17 @@ export class PostDetailView extends Component<Props> {
 }
 
 const mapStateToProps = (state: AppState, ownProps: OwnProps) => {
+  console.log('ownProps: ', ownProps);
   const postId = parseInt(ownProps.match.params.postId);
+  const post = state.posts.posts[postId] || {};
+  const userId = post.userId;
+  const user = state.users.users[userId] || {};
   return {
     comments: state.comments.comments[postId] || [],
     loading: state.users.loading,
     postId,
+    post,
+    user,
   };
 };
 
