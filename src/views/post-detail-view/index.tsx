@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { AppState } from '../../models/reducers';
 import fetchCommentsAction from '../../models/comments/comments-actions';
 import { Comment } from '../../models/comments/types';
+import CommentList from '../../components/comment-list';
 
 interface OwnProps {
   match: {
@@ -33,7 +34,13 @@ export class PostDetailView extends Component<Props> {
     }
   }
   render() {
-    return <div>Comments list</div>;
+    const { comments } = this.props;
+    return (
+      <div>
+        <h3>Post Title: </h3>
+        {comments.length && <CommentList comments={comments} />}
+      </div>
+    );
   }
 }
 

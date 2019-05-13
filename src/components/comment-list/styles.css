@@ -1,0 +1,40 @@
+.commentTitle {
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+.commentList {
+  list-style: none;
+  margin: 0 auto;
+  padding: 2rem 0;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.commentListItem {
+  padding: 1rem 0;
+  border-bottom: solid 1px gray;
+}
+
+.commentListItem:first-of-type {
+  border-top: solid 1px gray;
+}
+
+.commentSubject {
+  font-size: 1.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.commentBody {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.commentEmail {
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  color: #1079a2;
+  margin-bottom: 0.2rem;
+}
