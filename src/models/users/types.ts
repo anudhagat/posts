@@ -51,7 +51,30 @@ interface AddUsersPendingAction {
   type: typeof ADD_USERS_PENDING;
   payload: undefined;
 }
+
+export const FETCH_USER_SUCCESS = 'FETCH_USER_SUCCESS';
+export const FETCH_USER_FAILURE = 'FETCH_USER_FAILURE';
+export const FETCH_USER_PENDING = 'FETCH_USER_PENDING';
+
+interface FetchUserSuccessAction {
+  type: typeof FETCH_USER_SUCCESS;
+  payload: User;
+}
+
+interface FetchUserFailureAction {
+  type: typeof FETCH_USER_FAILURE;
+  payload: string;
+}
+
+interface FetchUserPendingAction {
+  type: typeof FETCH_USER_PENDING;
+  payload: undefined;
+}
+
 export type UserActionTypes =
   | AddUsersSuccessAction
   | AddUsersFailureAction
-  | AddUsersPendingAction;
+  | AddUsersPendingAction
+  | FetchUserSuccessAction
+  | FetchUserFailureAction
+  | FetchUserPendingAction;
