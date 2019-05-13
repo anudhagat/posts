@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import fetchPostsAction from '../../models/posts/posts-actions';
+import { fetchPostsAction } from '../../models/posts/posts-actions';
 import { Post } from '../../models/posts/types';
 import { AppState } from '../../models/reducers';
 import PostList from '../../components/post-list';
-import fetchUsersAction from '../../models/users/users-actions';
+import { fetchUsersAction } from '../../models/users/users-actions';
 import { User } from '../../models/users/types';
 
 interface StateProps {
@@ -45,7 +45,7 @@ export class PostsView extends Component<Props> {
 }
 
 const mapStateToProps = (state: AppState) => ({
-  posts: state.posts.posts,
+  posts: Object.values(state.posts.posts),
   users: state.users.users,
   isUsersLoading: state.users.loading,
   isPostsLoading: state.posts.loading,

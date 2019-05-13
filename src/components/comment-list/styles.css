@@ -1,13 +1,11 @@
 .commentTitle {
   margin: 0 auto;
-  max-width: 60%;
 }
 
 .commentList {
   list-style: none;
   margin: 0 auto;
   padding: 2rem 0;
-  max-width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

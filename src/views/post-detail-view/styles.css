@@ -1,0 +1,22 @@
+.postDetail {
+  margin: 0 auto;
+  padding: 3rem 0;
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.postTitle {
+  margin-bottom: 0.5rem;
+}
+
+.postAuthor {
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.postBody {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { AppState } from '../../models/reducers';
 import UserList from '../../components/user-list';
-import fetchUsersAction from '../../models/users/users-actions';
+import { fetchUsersAction } from '../../models/users/users-actions';
 import { User } from '../../models/users/types';
 
 interface StateProps {
