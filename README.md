@@ -1,10 +1,14 @@
+## Setup
+
+Git clone this repository and install all dependencies with: `npm install`. Then run the app using `npm start`. More details are below in the create-react-app section.
+
 ## Functionality
 
-This project displays information related to posts, users, and user comments. It has a header navigation which allows the user to toggle between a list of posts and a list of users.
+This project displays information related to posts, users, and user comments. It has a header navigation which allows the user to toggle between a list of posts and a list of users. The list of posts, users, and comments are obtained from the backend API: `https://jsonplaceholder.typicode.com`.
 
 ### Posts View
 
-Posts view is the default view and can be navigated to via `localhost:3000/`. It displays a list of clickable post titles. When a post title is clicked, a post detail view appears which shows the post title, author, and post body. This post detail view can also be navigated by typing `localhost:3000/post/<postid>`. In the post list view, if the author's name is clicked, the app displays information about the user. To go back to the all posts view, we can click on `Posts` in the header navigation.
+Posts view is the default view and can be navigated to via `localhost:3000/`. It displays a list of clickable post titles. When a post title is clicked, a post detail view appears which shows the post title, author, post body and a list of post comments. This post detail view can also be navigated by typing the url `localhost:3000/post/<postid>`. In the post list view, if the author's name is clicked, the app displays information about the user. To go back to the all posts view, we can click on `Posts` in the header navigation.
 
 ### Users View
 
@@ -12,9 +16,9 @@ The Users view can be navigated to by clicking on `Users` in the header or direc
 
 ## Improvements / Additions if I Had Unlimited Time
 
-- Add pagination for posts. In the real world, the lists of posts will be unbounded. We could work on a backend endpoint that returns paginated posts. On the frontend, we could implement a never-ending scroll that retrieves the next page of posts. Also we will have resolve the users that are not already in the redux store and fetch those users from the backend. For now, I am fetching all posts and users.
+- Add pagination for posts. In the real world, the lists of posts will be unbounded. We could work on a backend endpoint that returns paginated posts. On the frontend, we could implement a never-ending scroll that retrieves the next page of posts. Also we will have resolve the users that are not in the redux store and fetch those users from the backend. For now, I am fetching all posts and users.
 
-- Add more tests: I have a few to get started. I added a couple of snapshot tests with jest. I also added tests for comments-reducer.
+- Add more tests: I have a few to get started. I added a couple of snapshot tests with jest. I also added tests for the comments-reducer.
 
 - Add media queries for a great mobile experience: fix the css so that the lists cover 90% width.
 
@@ -22,9 +26,9 @@ The Users view can be navigated to by clicking on `Users` in the header or direc
 
 - Do some error handling / display using the error flag that is stored in the store
 
-- Show loading state (skeleton posts or loading circle) for posts / users using the loading flag.
+- Show the loading state (skeleton posts or loading circle) for posts / users using the loading flag.
 
-- We could add selectors (using `reselect`) for better performance
+- Add selectors (using `reselect`) for better performance
 
 ## Default information from Create React App
 
