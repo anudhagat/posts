@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HeaderNav/> renders without crashing 1`] = `
+"<header className=\\"header\\">
+  <nav className=\\"nav\\">
+    <ul className=\\"navList\\">
+      <li className=\\"navListItem\\">
+        <NavLink exact={true} to=\\"/\\" activeClassName=\\"selected\\">
+          Posts
+        </NavLink>
+      </li>
+      <li className=\\"navListItem\\">
+        <NavLink to=\\"/users\\" activeClassName=\\"selected\\">
+          Users
+        </NavLink>
+      </li>
+    </ul>
+  </nav>
+</header>"
+`;
